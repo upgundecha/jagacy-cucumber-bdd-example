@@ -1,0 +1,1 @@
+Download Jagacy bundle from http://www.jagacy.com/downloads.html and copy jagacy3270.jar in this folder
