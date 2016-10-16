@@ -40,7 +40,7 @@ public class PhonbookMenuScreen {
             throws JagacyException {
         session.setEntryFieldValue(actionEntryField, "F");
         session.writeKey(Key.ENTER);
-        session.waitForChange(10000);
+        session.waitForChange(session.DEFAULT_TIMEOUT);
         return new PhonbookSearchScreen(session);
     }
 }

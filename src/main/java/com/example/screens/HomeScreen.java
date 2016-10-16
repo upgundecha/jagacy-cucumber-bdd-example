@@ -38,7 +38,7 @@ public class HomeScreen {
     public final PhonbookMenuScreen openPhonbook() throws JagacyException {
         session.setEntryFieldValue(applicationEntryField, "PHONBOOK");
         session.writeKey(Key.ENTER);
-        session.waitForChange(10000);
+        session.waitForChange(session.DEFAULT_TIMEOUT);
         return new PhonbookMenuScreen(session);
     }
 }

@@ -22,6 +22,7 @@ public class Session extends Session3270 {
     private final HashMap<RenderingHints.Key, Object> renderingProperties
             = new HashMap<>();
 
+    public final int DEFAULT_TIMEOUT = 10000;
 
     public Session(final String session)
             throws JagacyException {
@@ -29,13 +30,25 @@ public class Session extends Session3270 {
         super(session);
    }
 
+    /**
+     * Wrapper method on waitForPosition.
+     * @param textLabel Label field object
+     * @return true or false
+     * @throws JagacyException JagacyException
+     */
     public final boolean waitForTextLabel(final LabelField textLabel)
             throws JagacyException {
 
         return waitForPosition(textLabel.getRow(),
-                textLabel.getColumn(), textLabel.getText(), 10000);
+                textLabel.getColumn(), textLabel.getText(), DEFAULT_TIMEOUT);
     }
 
+    /**
+     * Wrapper method on writePosition method of Jagacy.
+     * @param entryField Entry field object
+     * @param value value
+     * @throws JagacyException JagacyException
+     */
     public final void setEntryFieldValue(final EntryField entryField,
                                          final String value)
             throws JagacyException {
@@ -44,7 +57,15 @@ public class Session extends Session3270 {
                 entryField.getColumn(), value);
     }
 
+    /**
+     * Generates a screen shot by using readScreen method.
+     * @return screen shot in PNG
+     * @throws Exception JagacyException
+     */
     public final byte[] getScreenshot() throws Exception {
+
+        // below approach is inspired by solutions given
+        // at http://stackoverflow.com/questions/18800717/convert-text-content-to-image
 
         String screenText = StringUtils.join(readScreen(), "\n");
 

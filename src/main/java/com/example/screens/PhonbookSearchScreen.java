@@ -44,7 +44,7 @@ public class PhonbookSearchScreen {
             throws JagacyException {
         session.setEntryFieldValue(lastNameEntryField, lastName);
         session.writeKey(Key.ENTER);
-        session.waitForChange(10000);
+        session.waitForChange(session.DEFAULT_TIMEOUT);
     }
 
     /**
@@ -56,7 +56,7 @@ public class PhonbookSearchScreen {
             throws JagacyException {
         session.setEntryFieldValue(firstOrMiddleNameEntryField, firstOrMiddleName);
         session.writeKey(Key.ENTER);
-        session.waitForChange(10000);
+        session.waitForChange(session.DEFAULT_TIMEOUT);
     }
 
     /**

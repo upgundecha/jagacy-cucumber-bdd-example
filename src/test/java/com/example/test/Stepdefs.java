@@ -55,7 +55,7 @@ public class Stepdefs {
 
         scenario.embed(session.getScreenshot(), "image/png");
         phonbookSearchScreen = phonbookMenuScreen.openFacultyStaffListing();
-        phonbookSearchScreen.searchByFirstOrMiddleName("PRATIK");
+        phonbookSearchScreen.searchByFirstOrMiddleName(q);
 
     }
 
@@ -72,3 +72,4 @@ public class Stepdefs {
         session.close();
     }
 }
+
