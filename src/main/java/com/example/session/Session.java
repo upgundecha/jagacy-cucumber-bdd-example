@@ -36,10 +36,12 @@ public class Session extends Session3270 {
                 textLabel.getColumn(), textLabel.getText(), 10000);
     }
 
-    public final void setFieldValue(final EntryField entryField, final String value)
+    public final void setEntryFieldValue(final EntryField entryField,
+                                         final String value)
             throws JagacyException {
 
-        writePosition(entryField.getRow(), entryField.getColumn(), value);
+        writePosition(entryField.getRow(),
+                entryField.getColumn(), value);
     }
 
     public final byte[] getScreenshot() throws Exception {

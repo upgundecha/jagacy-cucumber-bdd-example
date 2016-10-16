@@ -38,7 +38,7 @@ public class PhonbookMenuScreen {
      */
     public final PhonbookSearchScreen openFacultyStaffListing()
             throws JagacyException {
-        session.setFieldValue(actionEntryField, "F");
+        session.setEntryFieldValue(actionEntryField, "F");
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
         return new PhonbookSearchScreen(session);

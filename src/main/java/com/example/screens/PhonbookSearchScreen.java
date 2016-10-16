@@ -42,7 +42,7 @@ public class PhonbookSearchScreen {
      */
     public final void searchByLastname(final String lastName)
             throws JagacyException {
-        session.setFieldValue(lastNameEntryField, lastName);
+        session.setEntryFieldValue(lastNameEntryField, lastName);
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
     }
@@ -54,7 +54,7 @@ public class PhonbookSearchScreen {
      */
     public final void searchByFirstOrMiddleName(final String firstOrMiddleName)
             throws JagacyException {
-        session.setFieldValue(firstOrMiddleNameEntryField, firstOrMiddleName);
+        session.setEntryFieldValue(firstOrMiddleNameEntryField, firstOrMiddleName);
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
     }
