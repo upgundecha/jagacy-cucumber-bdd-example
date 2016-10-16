@@ -17,7 +17,7 @@ public class HomeScreen {
     // Screen fields
     private LabelField waitForLabel =
             new LabelField(17, 6, "TEXAS A & M UNIVERSITY");
-    private EntryField applicationEntryEntryField = new EntryField(23, 1);
+    private EntryField applicationEntryField = new EntryField(23, 1);
 
     public HomeScreen(final Session s) throws JagacyException {
         this.session = s;
@@ -36,7 +36,7 @@ public class HomeScreen {
      * @throws JagacyException JagacyException
      */
     public final PhonbookMenuScreen openPhonbook() throws JagacyException {
-        session.setFieldValue(applicationEntryEntryField, "PHONBOOK");
+        session.setFieldValue(applicationEntryField, "PHONBOOK");
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
         return new PhonbookMenuScreen(session);
