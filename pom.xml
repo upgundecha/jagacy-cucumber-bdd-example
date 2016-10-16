@@ -6,13 +6,23 @@
 
     <groupId>com.example</groupId>
     <artifactId>jagacy-cucumber-bdd-example</artifactId>
+    <name>Jagacy Cucumber BDD Example</name>
     <version>1.0-SNAPSHOT</version>
+
+    <developers>
+        <developer>
+            <name>Unmesh Gundecha</name>
+            <email>upgundecha@gmail.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>1.7</java.version>
         <junit.version>4.12</junit.version>
         <cucumber.version>1.2.4</cucumber.version>
         <maven.compiler.version>3.3</maven.compiler.version>
+        <commons.lang3.version>3.4</commons.lang3.version>
+        <jagacy.version>4.2.3</jagacy.version>
     </properties>
 
     <dependencies>
@@ -36,6 +46,20 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jagacy3270</groupId>
+            <artifactId>jagacy3270</artifactId>
+            <version>${jagacy.version}</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/test/resources/lib/jagacy3270.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
@@ -53,5 +77,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
