@@ -3,14 +3,14 @@ package com.example.Fields;
 /**
  * Created by upgundecha on 16/10/16.
  */
-public class TextLabel {
+public class LableField {
 
     private int row;
     private int column;
     private String text;
 
-    public TextLabel(final int rowNum, final int columnNum,
-                     final String labelText) {
+    public LableField(final int rowNum, final int columnNum,
+                      final String labelText) {
         this.row = rowNum;
         this.column = columnNum;
         this.text = labelText;
