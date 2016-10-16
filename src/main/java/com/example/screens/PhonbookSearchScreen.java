@@ -1,8 +1,8 @@
 package com.example.screens;
 
-import com.example.Fields.EntryField;
+import com.example.fields.EntryField;
 import com.example.session.Session;
-import com.example.Fields.LabelField;
+import com.example.fields.LabelField;
 import com.jagacy.Key;
 import com.jagacy.util.JagacyException;
 

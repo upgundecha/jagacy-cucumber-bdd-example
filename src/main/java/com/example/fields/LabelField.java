@@ -1,4 +1,4 @@
-package com.example.Fields;
+package com.example.fields;
 
 /**
  * Created by upgundecha on 16/10/16.

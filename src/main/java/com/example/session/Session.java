@@ -1,7 +1,7 @@
 package com.example.session;
 
-import com.example.Fields.EntryField;
-import com.example.Fields.LabelField;
+import com.example.fields.EntryField;
+import com.example.fields.LabelField;
 import com.jagacy.Session3270;
 import com.jagacy.util.JagacyException;
 import org.apache.commons.lang3.StringUtils;
