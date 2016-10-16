@@ -3,13 +3,13 @@ package com.example.Fields;
 /**
  * Created by upgundecha on 16/10/16.
  */
-public class LableField {
+public class LabelField {
 
     private int row;
     private int column;
     private String text;
 
-    public LableField(final int rowNum, final int columnNum,
+    public LabelField(final int rowNum, final int columnNum,
                       final String labelText) {
         this.row = rowNum;
         this.column = columnNum;

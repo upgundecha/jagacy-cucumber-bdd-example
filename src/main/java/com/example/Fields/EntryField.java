@@ -3,12 +3,12 @@ package com.example.Fields;
 /**
  * Created by upgundecha on 16/10/16.
  */
-public class Field {
+public class EntryField {
 
     private int row;
     private int column;
 
-    public Field(final int rowNum, final int columnNum) {
+    public EntryField(final int rowNum, final int columnNum) {
         this.row = rowNum;
         this.column = columnNum;
     }

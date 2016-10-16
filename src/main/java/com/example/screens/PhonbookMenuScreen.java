@@ -1,8 +1,8 @@
 package com.example.screens;
 
-import com.example.Fields.Field;
+import com.example.Fields.EntryField;
 import com.example.session.Session;
-import com.example.Fields.TextLabel;
+import com.example.Fields.LabelField;
 import com.jagacy.Key;
 import com.jagacy.util.JagacyException;
 
@@ -15,9 +15,9 @@ public class PhonbookMenuScreen {
     private String screenCrc = "0x3acc869";
 
     // Screen fields
-    private TextLabel waitForLabel =
-            new TextLabel(1, 27, "TAMU  System  Directory");
-    private Field actionField = new Field(11, 33);
+    private LabelField waitForLabel =
+            new LabelField(1, 27, "TAMU  System  Directory");
+    private EntryField actionEntryField = new EntryField(11, 33);
 
     public PhonbookMenuScreen(final Session s) throws JagacyException {
         this.session = s;
@@ -38,7 +38,7 @@ public class PhonbookMenuScreen {
      */
     public final PhonbookSearchScreen openFacultyStaffListing()
             throws JagacyException {
-        session.setFieldValue(actionField, "F");
+        session.setFieldValue(actionEntryField, "F");
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
         return new PhonbookSearchScreen(session);

@@ -1,8 +1,8 @@
 package com.example.screens;
 
-import com.example.Fields.Field;
+import com.example.Fields.EntryField;
 import com.example.session.Session;
-import com.example.Fields.TextLabel;
+import com.example.Fields.LabelField;
 import com.jagacy.Key;
 import com.jagacy.util.JagacyException;
 
@@ -18,9 +18,9 @@ public class PhonbookSearchScreen {
     private String screenCrc = "0x4b7c5511";
 
     // Screen fields
-    private TextLabel waitForLabel = new TextLabel(1, 15, "Faculty/Staff");
-    private Field firstOrMiddleNameField = new Field(19, 47);
-    private Field lastNameField = new Field(19, 6);
+    private LabelField waitForLabel = new LabelField(1, 15, "Faculty/Staff");
+    private EntryField firstOrMiddleNameEntryField = new EntryField(19, 47);
+    private EntryField lastNameEntryField = new EntryField(19, 6);
 
     public PhonbookSearchScreen(final Session s) throws JagacyException {
         this.session = s;
@@ -42,7 +42,7 @@ public class PhonbookSearchScreen {
      */
     public final void searchByLastname(final String lastName)
             throws JagacyException {
-        session.setFieldValue(lastNameField, lastName);
+        session.setFieldValue(lastNameEntryField, lastName);
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
     }
@@ -54,7 +54,7 @@ public class PhonbookSearchScreen {
      */
     public final void searchByFirstOrMiddleName(final String firstOrMiddleName)
             throws JagacyException {
-        session.setFieldValue(firstOrMiddleNameField, firstOrMiddleName);
+        session.setFieldValue(firstOrMiddleNameEntryField, firstOrMiddleName);
         session.writeKey(Key.ENTER);
         session.waitForChange(10000);
     }

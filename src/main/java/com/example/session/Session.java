@@ -1,7 +1,7 @@
 package com.example.session;
 
-import com.example.Fields.Field;
-import com.example.Fields.TextLabel;
+import com.example.Fields.EntryField;
+import com.example.Fields.LabelField;
 import com.jagacy.Session3270;
 import com.jagacy.util.JagacyException;
 import org.apache.commons.lang3.StringUtils;
@@ -29,17 +29,17 @@ public class Session extends Session3270 {
         super(session);
    }
 
-    public final boolean waitForTextLabel(final TextLabel textLabel)
+    public final boolean waitForTextLabel(final LabelField textLabel)
             throws JagacyException {
 
         return waitForPosition(textLabel.getRow(),
                 textLabel.getColumn(), textLabel.getText(), 10000);
     }
 
-    public final void setFieldValue(final Field field, final String value)
+    public final void setFieldValue(final EntryField entryField, final String value)
             throws JagacyException {
 
-        writePosition(field.getRow(), field.getColumn(), value);
+        writePosition(entryField.getRow(), entryField.getColumn(), value);
     }
 
     public final byte[] getScreenshot() throws Exception {
